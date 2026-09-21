@@ -5,7 +5,7 @@
         "appIDs": ["S46L7RX9F3.com.lighthouse.prayer"],
         "components": [
           {
-            "/": "/nfc/v1/*",
+            "/": "/nfc/v1/secret-place",
             "comment": "Prayer NFC cards"
           }
         ]

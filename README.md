@@ -21,7 +21,7 @@ NFC card links:
       {
         "appIDs": ["S46L7RX9F3.com.lighthouse.prayer"],
         "components": [
-          { "/": "/nfc/v1/*" }
+          { "/": "/nfc/v1/secret-place" }
         ]
       }
     ]
@@ -34,6 +34,7 @@ Build a new iOS app after changing this association. Apple’s CDN can take up t
 24 hours to fetch a newly changed association file; a fresh install is the most
 reliable first verification.
 
-NFC cards use URLs such as:
+Every NFC card uses this URL; personalization belongs in its second NDEF
+record:
 
-`https://prayer-app-support.github.io/nfc/v1/grace-home-01`
+`https://prayer-app-support.github.io/nfc/v1/secret-place`
