@@ -9,17 +9,17 @@ The live association file must remain at this exact path:
 
 `https://prayer-app-support.github.io/.well-known/apple-app-site-association`
 
-## Activate the association
+## Association
 
-The initial file deliberately has no linked apps. Before releasing an NFC-aware
-Prayer build, replace its `details` array with the Apple Developer Team ID:
+The live association authorizes Prayer's signed iOS application for version 1
+NFC card links:
 
 ```json
 {
   "applinks": {
     "details": [
       {
-        "appIDs": ["YOUR_10_CHARACTER_TEAM_ID.com.lighthouse.prayer"],
+        "appIDs": ["S46L7RX9F3.com.lighthouse.prayer"],
         "components": [
           { "/": "/nfc/v1/*" }
         ]
@@ -29,10 +29,10 @@ Prayer build, replace its `details` array with the Apple Developer Team ID:
 }
 ```
 
-The app’s Expo config already declares
-`applinks:prayer-app-support.github.io`. Build a new iOS app after activating
-the association. Apple’s CDN can take up to 24 hours to fetch a newly changed
-association file; a fresh install is the most reliable first verification.
+The app’s Expo config declares `applinks:prayer-app-support.github.io`.
+Build a new iOS app after changing this association. Apple’s CDN can take up to
+24 hours to fetch a newly changed association file; a fresh install is the most
+reliable first verification.
 
 NFC cards use URLs such as:
 
